@@ -3,25 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Mart</title>
+    <title>VegWeb</title>
+    <link rel="icon" type="image/x-icon" href="assets/vegweb-logo-removebg-preview.png">
     <link rel="stylesheet" href="styles.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"crossorigin="anonymous"
     />
 </head>
-<body style=" background-color: green">
-    <div class="navbar">
-      <div class="container">
-      <a href="#" class="navbar-brand " style=" margin: auto font-size:50px ">Shopping Mart</a>
+<body style=" background-color: #0149016a ;font-family:Arial, Helvetica, sans-serif">
+  <div class="navbar navbar-expand-lg" style="background-color: #2d8d2d  ;border:green 2px solid">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="font-size: 2.5rem;margin-left: 0px; font-weight: bolder;" href="#"><img src="assets/vegweb-logo-removebg-preview.png" style="height: 100px; width: 100px; margin-right:10px ;">VegWeb</a>
+    <div class="d-flex" >
+      <a class="nav-link" style="margin-right: 20px;color: azure;"  href="AboutUs.html">About us</a>
+      <a class="nav-link"  style="margin-right: 20px;color: azure;" href="contact.html" >Contact us</a>
+      <a class="nav-link" style="margin-right: 20px;color: azure;"  href="Services.html">Services</a>
     </div>
-    </div>
-   
+  </div>
+  </div>
+  <p style="text-align: center;font-weight: bolder;font-size: 40px;"><em>Welcome to the Vegetable Website!!!</em></p>
+  <div style="justify-content: center;align-items: center; ">
+    <img src="assets/shop-removebg-preview.png"  style=" height: 40%;width: 40%; display: inline-block;  margin-left: 100px ;">
+  <img src="assets/right-man.webp" style=" height: 40%;width: 40%; display: inline-block;  margin-left: 50px ;">
+  </div>
+  
+<button id="btn" style="
+    border-color:black; 
+    color:black;
+    background-color: green;
+    transition: all 0.3s ease; 
+    padding: 10px;
+     font-size: 30px; 
+     border-radius: 10px; 
+     display: block;
+      margin: auto; 
+      margin-bottom: 10px;
+">Start Shopping</button>
+
+  <p style="text-align: center;font-weight: bold;font-size: 20px; ">“Eat green, live clean”</p>
+
+
+
     
     
     
 </body>
+<script>
+  const startButton = document.getElementById('btn');
+startButton.addEventListener('click', (event) => {
+   window.location.href = "StartShopping.html";
+});
+</script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"crossorigin="anonymous"
   ></script>
-    <script src="script.js"></script>
+    
 </html>

@@ -1,0 +1,16 @@
+body{
+    background-color:  #0149016a;
+    
+}
+img{
+    border: black 40px;
+    
+    width: 100%;
+    height:70px;
+    background-color: #0149016a;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;   /* equal height for all images */
+}
