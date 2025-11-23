@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy</title>
+    <style>
+        .value{
+            font-size: 4rem;
+        }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles2.css" />
+</head>
+<body style="background-color: #027a026a ; font-family: Arial, Helvetica, sans-serif">
+   
+<!-- NAVBAR (UPDATE 2 APPLIED) -->
+<div class="navbar" style="background-color: #2d8d2d; border: green 2px solid;">
+    <div class="container-fluid nav-box">
+
+        <a class="navbar-brand d-flex align-items-center"
+           style="font-size: 2.2rem; font-weight: bolder;" href="index.html">
+
+          <img src="assets/vegweb-logo-removebg-preview.png"
+               style="height: 70px; width: 70px; margin-right: 10px;background-color: #2d8d2d;" />
+
+          VegWeb
+        </a>
+
+    </div>
+</div>
+
+
+<!-- PAYMENT BOX (UPDATE 1 APPLIED) -->
+<div class="payment-box container-fluid" 
+     style="display: block; border: black 2px solid;border-radius: 20px; background-color: white; margin: auto;margin-top: 30px;"> 
+
+    <h2 style="text-align: center;padding: 10px 10px 5px 10px;">Payment Bar</h2>
+    <hr>
+    <h4>How would you like to pay?</h4>
+    <br>
+
+    <div class="payment-options" style="display: block;text-align: center;">
+        <input type="radio" name="payment" id="gpay" value="gpay">
+        <label for="gpay" class="payment-label">
+            <img src="assets/gpay.webp" style="height: auto; width: 100px;" alt="Google Pay">
+        </label>
+
+        <input type="radio" name="payment" id="phonepe" value="phonepe">
+        <label for="phonepe" class="payment-label">
+            <img src="assets/phonepe.png" style="height: auto; width: 100px;" alt="PhonePe">
+        </label>
+
+        <input type="radio" name="payment" id="paytm" value="paytm">
+        <label for="paytm">
+            <img src="assets/paytm-logo-png_seeklogo-501241.png" style="height: auto; width: 100px;" alt="Paytm">
+        </label>
+    </div>
+
+    <h4><button class="pay">Pay : Rs.<span id="box" class="box"></span></button></h4>
+
+</div>
+        
+<script>
+    let vlaue = localStorage.getItem("Value");
+    let result = Number(vlaue);
+    let box = document.getElementById("box");
+    box.textContent = result;
+    box.classList.add(".value");
+
+    document.querySelector(".pay").addEventListener("click", function () {
+    let selected = document.querySelector('input[name="payment"]:checked');
+
+    if (!selected) {
+        alert("Please select a payment method.");
+        return;
+    }
+
+    let method = selected.value;
+
+    if (method === "gpay") {
+        window.location.href = "https://pay.google.com/";
+    }
+    else if (method === "phonepe") {
+        window.location.href = "https://www.phonepe.com/";
+    }
+    else if (method === "paytm") {
+        window.location.href = "https://paytm.com/";
+    }
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

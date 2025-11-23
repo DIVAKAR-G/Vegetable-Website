@@ -1,65 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VegWeb</title>
-    <link rel="icon" type="image/x-icon" href="assets/vegweb-logo-removebg-preview.png">
-    <link rel="stylesheet" href="styles.css">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"crossorigin="anonymous"
-    />
-</head>
-<body style=" background-color: #0149016a ;font-family:Arial, Helvetica, sans-serif">
-  <div class="navbar navbar-expand-lg" style="background-color: #2d8d2d  ;border:green 2px solid">
-  <div class="container-fluid">
-    <a class="navbar-brand" style="font-size: 2.5rem;margin-left: 0px; font-weight: bolder;" href="#"><img src="assets/vegweb-logo-removebg-preview.png" style="height: 100px; width: 100px; margin-right:10px ;">VegWeb</a>
-    <div class="d-flex" >
-      <a class="nav-link" style="margin-right: 20px;color: azure;"  href="AboutUs.html">About us</a>
-      <a class="nav-link"  style="margin-right: 20px;color: azure;" href="contact.html" >Contact us</a>
-      <a class="nav-link" style="margin-right: 20px;color: azure;"  href="Services.html">Services</a>
-    </div>
-  </div>
-  </div>
-  <p style="text-align: center;font-weight: bolder;font-size: 40px;"><em>Welcome to the Vegetable Website!!!</em></p>
-  <div class="container text-center ">
-    <div class="row"><div class="col-12  col-md-6"><img src="assets/shop-removebg-preview.png"  class="img-fluid"></div>
-  <div class="col-12  col-md-6">  <img src="assets/right-man.webp" class="img-fluid"></div>
-</div>
-    
 
-  </div>
+    <style>
+      .page {
+        display: none;
+      }
+      .page.active {
+        display: block;
+      }
+
+      .card img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+      }
+
+      #btn:hover {
+        background-color: darkgreen !important;
+        color: aliceblue;
+        transform: scale(1.05);
+      }
+   
   
-<button id="btn" style="
-    border-color:black; 
-    color:black;
-    background-color: green;
-    transition: all 0.3s ease; 
-    padding: 10px;
-     font-size: 30px; 
-     border-radius: 10px; 
-     display: block;
-      margin: auto; 
-      margin-bottom: 10px;
-      margin-top: 20px;
-">Start Shopping</button>
-
-  <p style="text-align: center;font-weight: bold;font-size: 20px; ">“Eat green, live clean”</p>
-
-
+  @media (max-width: 600px) {
+    .contact-span {
+      display: block;
+      margin-left: 32px; 
+      margin-top: 4px;
+    }
+  }
+</style >
 
     
+
+    <link rel="icon" type="image/x-icon" href="assets/vegweb-logo-removebg-preview.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body  style="background-color: #027a026a; font-family: Arial, Helvetica, sans-serif">
+
+    <div id="page1" class="page active" style="background-color: #01490117 ; font-family: Arial, Helvetica, sans-serif">
+      <div class="navbar navbar-expand-lg" style="background-color: #2d8d2d; border: green 2px solid">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="font-size: 2.5rem; font-weight: bolder" href="#">
+            <img src="assets/vegweb-logo-removebg-preview.png" style="height: 100px; width: 100px; margin-right: 10px" />
+            VegWeb
+          </a>
+
+          <div class="d-flex">
+            <button onclick="showPage('page2')" style="margin-right: 20px;background-color: #2d8d2d; color: white;border: none;">About us</button>
+            <button onclick="showPage('page3')" style="margin-right: 20px;background-color: #2d8d2d; color: white;border: none;">Contact us</button>
+            <button onclick="showPage('page4')" style="margin-right: 20px;background-color: #2d8d2d; color: white;border: none;">Services</button>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align: center; font-weight: bolder; font-size: 40px;margin-top: 35px;">
+        <em>Welcome to the Vegetable Website!!!</em>
+      </p>
+
+      <div class="container text-center">
+        <div class="row" style="margin-top: 40px;">
+          <div class="col-12 col-md-6">
+            <img src="assets/shop-removebg-preview.png" class="img-fluid" />
+          </div>
+          <div class="col-12 col-md-6">
+            <img src="assets/right-man.webp" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+
+      <button
+        id="btn"
+        style="
+          border-color: black;
+          color: black;
+          background-color: green;
+          transition: all 0.3s ease;
+          padding: 10px;
+          font-size: 30px;
+          border-radius: 10px;
+          display: block;
+          margin: auto;
+          margin-bottom: 10px;
+          margin-top: 30px;
+        "
+      >
+        Start Shopping
+      </button>
+
+      <p style="text-align: center;overflow: hidden; font-weight: bold; font-size: 20px">
+        “Eat green, live clean”
+      </p>
+      <div style="
+    width: 100%;
+    height: 150px;
+    background-color: black;
+   
+">
+    <h1 style="padding: 30px 30px 0px 30px;"><a href="index.html" style="color: #2d8d2d; text-decoration: none;">VegWeb</a></h1>
     
+    <button onclick="showPage('page3')" style="border: none ;background-color: black;padding-left: 30px;"><img src="assets/whatsapp.png" class="img-fluid"
+           style="width: 35px; height: auto;" ></button>
+    <button onclick="showPage('page3')" style="border: none ;background-color: black;padding-left: 1px;"><img src="assets/instagram-logo.png" class="img-fluid"
+           style="width: 45px; height: auto;" ></button>
+    <button onclick="showPage('page3')" style="border: none ;background-color: black;padding-left: 1px;"><img src="assets/X_logo.jpg" class="img-fluid"
+           style="width: 35px; height: auto;" ></button>
+</div>
+
+
+    </div>
+
     
-</body>
-<script>
-  const startButton = document.getElementById('btn');
-startButton.addEventListener('click', (event) => {
-   window.location.href = "StartShopping.html";
+    <div class="page" id="page2" style="overflow: hidden;">
+      <div class="navbar navbar-expand-lg" style="background-color: #2d8d2d; border: green 2px solid">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="font-size: 2.5rem; font-weight: bolder" href="index.html">
+            <img src="assets/vegweb-logo-removebg-preview.png" style="height: 100px; width: 100px; margin-right: 10px" />
+            VegWeb
+          </a>
+
+          <div class="d-flex">
+            <a class="nav-link" onclick="showPage('page1')" style="margin-right: 20px; color: azure; cursor: pointer;">Home</a>
+            <a class="nav-link" onclick="showPage('page2')" style="margin-right: 20px; color: azure; cursor: pointer;">About us</a>
+            <a class="nav-link" onclick="showPage('page3')" style="margin-right: 20px; color: azure; cursor: pointer;">Contact us</a>
+            <a class="nav-link" onclick="showPage('page4')" style="margin-right: 20px; color: azure; cursor: pointer;">Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <h1 style="font-weight: bold; text-decoration: underline;"><em>About VegWeb</em></h1>
+        <div style="margin: 30px;">
+          <h4>VegWeb is an online vegetable shopping platform created to make fresh produce easily accessible to everyone.</h4>
+          <ul>
+            <li>Fresh, quality vegetables</li>
+            <li>Clean and hygienic packaging</li>
+            <li>Fast and reliable delivery</li>
+            <li>Affordable pricing</li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div style="
+    width: 100%;
+    height: 150px;
+    background-color: black;
+   
+">
+    <h1 style="padding: 30px 30px 0px 30px;"><a href="index.html" style="color: #2d8d2d; text-decoration: none;">VegWeb</a></h1>
+    
+    <button onclick="showPage('page3')" style="border: none ;background-color: black;padding-left: 30px;"><img src="assets/whatsapp.png" class="img-fluid"
+           style="width: 35px; height: auto;" ></button>
+    <button onclick="showPage('page3')" style="border: none ;background-color: black;padding-left: 1px;"><img src="assets/instagram-logo.png" class="img-fluid"
+           style="width: 45px; height: auto;" ></button>
+    <button onclick="showPage('page3')" style="border: none ;background-color: black;padding-left: 1px;"><img src="assets/X_logo.jpg" class="img-fluid"
+           style="width: 35px; height: auto;" ></button>
+</div>
+    </div>
+
+    
+    <div class="page" id="page3" style="overflow: hidden;">
+      <div class="navbar navbar-expand-lg" style="background-color: #2d8d2d; border: green 2px solid">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="font-size: 2.5rem; font-weight: bolder" href="index.html">
+            <img src="assets/vegweb-logo-removebg-preview.png" style="height: 100px; width: 100px; margin-right: 10px" />
+            VegWeb
+          </a>
+
+          <div class="d-flex">
+            <a class="nav-link" onclick="showPage('page1')" style="margin-right: 20px; color: azure; cursor: pointer;">Home</a>
+            <a class="nav-link" onclick="showPage('page2')" style="margin-right: 20px; color: azure; cursor: pointer;">About us</a>
+            <a class="nav-link" onclick="showPage('page3')" style="margin-right: 20px; color: azure; cursor: pointer;">Contact us</a>
+            <a class="nav-link" onclick="showPage('page4')" style="margin-right: 20px; color: azure; cursor: pointer;">Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin: 30px;">
+  <h1 style="font-weight: bold; text-decoration: underline;">Contact Us</h1>
+
+  <ul style="line-height: 40px; padding-left: 20px;">
+
+    <li>
+      <img src="assets/whatsapp.png" class="img-fluid"
+           style="width: 45px; height: auto; vertical-align: middle; margin-right: 10px;">
+      <b>WhatsApp:</b>
+      <span class="contact-span" style="text-decoration: underline; color: blue;">+91 98765 43210</span>
+    </li>
+
+    <li>
+      <img src="assets/gmail-logo.png" class="img-fluid"
+           style="width: 45px; height: auto; vertical-align: middle; margin-right: 10px;">
+      <b>Email:</b>
+      <span class="contact-span" style="text-decoration: underline; color: blue;">support@vegweb.com</span>
+    </li>
+
+    <li>
+      <img src="assets/instagram-logo.png" class="img-fluid"
+           style="width: 58px; height: auto; vertical-align: middle; margin-right: 10px;">
+      <b>Instagram:</b>
+      <span class="contact-span" style="text-decoration: underline; color: blue;">https://instagram-vegweb/2025/.com</span>
+    </li>
+
+    <li>
+      <img src="assets/facebook.png" class="img-fluid"
+           style="width: 45px; height: auto; vertical-align: middle; margin-right: 10px;">
+      <b>Facebook:</b>
+      <span class="contact-span" style="text-decoration: underline; color: blue;">https://facebook-vegweb/2025/.com</span>
+    </li>
+     <li>
+      <img src="assets/X_logo.jpg" class="img-fluid"
+           style="width: 30px; height: auto; vertical-align: middle; margin-left: 7px;">
+      <b style="margin-left: 10px;">X:</b>
+      <span class="contact-span" style="text-decoration: underline; color: blue;">https://x/-vegweb/2025/.com</span>
+    </li>
+    <li>
+      <img src="assets/adress-logo-removebg-preview.png" class="img-fluid"
+           style="width: 48px; height: auto; vertical-align: middle; margin-right: 0px;">
+      <b>Address:</b><span class="contact-span"> VegWeb Store, Coimbatore, Tamil Nadu, India</span>
+    </li>
+   
+
+    <li>
+      <b>Working Hours:</b> <span class="contact-span">Sunday: 7:00 AM – 9:00 PM</span>
+    </li>
+
+  </ul>
+</div>
+
+</div>
+   
+    <div class="page" id="page4" style="overflow: hidden;">
+      <div class="navbar navbar-expand-lg" style="background-color: #2d8d2d; border: green 2px solid">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="font-size: 2.5rem; font-weight: bolder" href="index.html">
+            <img src="assets/vegweb-logo-removebg-preview.png" style="height: 100px; width: 100px; margin-right: 10px" />
+            VegWeb
+          </a>
+
+          <div class="d-flex">
+            <a class="nav-link" onclick="showPage('page1')" style="margin-right: 20px; color: azure; cursor: pointer;">Home</a>
+            <a class="nav-link" onclick="showPage('page2')" style="margin-right: 20px; color: azure; cursor: pointer;">About us</a>
+            <a class="nav-link" onclick="showPage('page3')" style="margin-right: 20px; color: azure; cursor: pointer;">Contact us</a>
+            <a class="nav-link" onclick="showPage('page4')" style="margin-right: 20px; color: azure; cursor: pointer;">Services</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin: 30px;">
+        <h1 style="font-weight: bold; text-decoration: underline;">Services We Provide</h1>
+        <ul>
+          <li><h5>Fresh Vegetables Delivery</h5>Daily delivery of fresh vegetables straight to your home.</li>
+          <li><h5>Bulk Orders for Events</h5>We take bulk orders for functions/restaurants.</li>
+          <li><h5>Daily Offers & Discounts</h5>Special deals on selected vegetables.</li>
+          <li><h5>Doorstep Delivery</h5>Fast home delivery guaranteed.</li>
+        </ul>
+      </div>
+      <br>
+       <div style="
+    width: 100%;
+    height: 150px;
+    background-color: black;
+   
+">
+    <h1 style="padding: 30px 30px 0px 30px;"><a href="index.html" style="color: #2d8d2d; text-decoration: none;">VegWeb</a></h1>
+    
+    <button onclick="showPage('page3')" style="border: none ;background-color: black;padding-left: 30px;"><img src="assets/whatsapp.png" class="img-fluid"
+           style="width: 35px; height: auto;" ></button>
+    <button onclick="showPage('page3')" style="border: none ;background-color: black;padding-left: 1px;"><img src="assets/instagram-logo.png" class="img-fluid"
+           style="width: 45px; height: auto;" ></button>
+    <button onclick="showPage('page3')" style="border: none ;background-color: black;padding-left: 1px;"><img src="assets/X_logo.jpg" class="img-fluid"
+           style="width: 35px; height: auto;" ></button>
+</div>
+    </div>
+    <script defer>
+function showPage(pageId) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+}
+
+
+const params = new URLSearchParams(window.location.search);
+let page = params.get("page");
+
+
+if (page) {
+    showPage(page);
+} else {
+    showPage("page1"); 
+}
+
+const start = document.getElementById("btn");
+start.addEventListener('click', () => {
+    window.location.href="StartShopping.html";
 });
 </script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"crossorigin="anonymous"
-  ></script>
+
+  </body>
     
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
